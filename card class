@@ -1,0 +1,41 @@
+package CardProblem;
+
+public class card {
+
+    private String suite;
+    private int value;
+    private boolean drawn;
+
+    public card(String s, int v)
+    {
+        suite = s;
+        value = v;
+        drawn = false;
+    }
+
+
+
+    public void displayCard() {
+        System.out.print("Card drawn was " + value + " of " + suite);
+
+        if (drawn == false)
+            System.out.println(" and it has not been picked");
+        else
+            System.out.println(" and it has been picked");
+    }
+
+    public boolean returnCard(){
+        return(drawn);
+    }
+
+    public void setCard(boolean z){
+        drawn = z;
+    }
+
+
+
+
+
+
+
+}
