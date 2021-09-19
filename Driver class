@@ -1,0 +1,98 @@
+package CardProblem;
+
+public class Driver {
+
+    public static void main(String[] args) {
+
+        card deck[] = new card[52];
+        int value = 0;
+
+//        card c1 = new card("Spades", 1); //could have used symbolic rep 1 – hearts etc
+//        card c2 = new card("Spades", 2);
+//        card c3 = new card("Spades", 3);
+//        card c4 = new card("Spades", 4);
+//        card c5 = new card("Spades", 5);
+//        card c6 = new card("Spades", 6);
+//        card c7 = new card("Spades", 7);
+//        card c8 = new card("Spades", 8);
+//        card c9 = new card("Spades", 9);
+//        card c10 = new card("Spades", 10);
+//        card c11 = new card("Spades", 11);
+//        card c12 = new card("Spades", 12);
+//        card c13 = new card("Spades", 13);
+//
+//        deck[1] = c1; //Adding a card to the deck – basic method (yawn)
+//        deck[2] = c2;
+//        deck[3] = c3;
+//        deck[4] = c4;
+
+
+
+
+            for(int i=0; i<13;i++) {
+
+                card card = new card("Spades", i+1 );
+                System.out.println("");
+                deck[i] = card;
+
+            }
+
+
+        for(int i=0; i<13;i++) {
+
+            card card = new card("Hearts", i+1 );
+            System.out.println("");
+            deck[i+13] = card;
+
+        }
+
+        for(int i=0; i<13;i++) {
+
+            card card = new card("Clubs", i +1);
+            System.out.println("");
+            deck[i+26] = card;
+
+        }
+
+        for(int i=0; i<13;i++) {
+
+            card card = new card("Diamonds", i+1 );
+            System.out.println("");
+            deck[i+39] = card;
+
+        }
+
+
+
+
+
+
+
+        //display all cards
+        System.out.println("\nDisplaying all cards\n");
+        for (int x = 0; x <= 51; x++)
+            deck[x].displayCard();
+
+        value = (int) (Math.random() * 12) + 1;
+        System.out.println("\nFirst random number generated was " + value+"\n");
+        deck[value-1].setCard(true);
+
+        for (int x = 0; x <= 51; x++)
+            deck[x].displayCard();
+
+        value = (int) (Math.random() * 52) + 1;
+        System.out.println("\nSecond random number generated was " + value+"\n");
+        deck[value-1].setCard(true);
+
+        System.out.println("\nDisplaying all cards\n");
+        for (int x = 0; x <= 51; x++)
+            deck[x].displayCard();
+
+
+
+    }
+
+
+
+
+}
